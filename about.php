@@ -1,3 +1,13 @@
+<?php
+$number = rand(4,9999);
+$myname = 'Богдан';
+$mysurname = 'Ангалейт';
+$myage = 34;
+$mycity = 'Москва';
+$myemail = 'angaleit@gmail.com';
+$myinfo = 'Работаю в IT компании. Люблю спорт, путешествия, читать.
+Учусь на онлайн-курсах в Нетологии.';
+?>
 <!DOCTYPE html>
 <html>
 
@@ -31,18 +41,8 @@
 
 <body>
     <section>
-<?php
-$number = rand(4,9999);
-$myname = 'Богдан';
-$mysurname = 'Ангалейт';
-$myage = 34;
-$mycity = 'Москва';
-$myemail = 'angaleit@gmail.com';
-$myinfo = 'Работаю в IT компании. Люблю спорт, путешествия, читать.
-Учусь на онлайн-курсах в Нетологии.';
-echo '<h1>Информационная карточка  '.$mysurname.' '.$myname.'а. Сегодня '.date('d.m.Y').'</h1>'; //Просто чтоб вывести разным способами
-echo "<p>номер карточки - $number<p>";
-?>
+<h1>Информационная карточка  '.$mysurname.' '.$myname.'а. Сегодня '.date('d.m.Y').'</h1>
+<p>номер карточки - $number<p>
 <ul>
     <li>Полное имя - <?=$mysurname." ".$myname;?></li>
     <li>Мой возраст - <?=$myage;?> года</li>
