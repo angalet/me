@@ -24,29 +24,31 @@
 <p><input type="submit" name="OK" value="OK" /></p>
 </form>
 <?php
-if (isset($_GET['OK'])){
-    $x = $_GET['number'];
-    echo "Вы ввели число - $x<br>";
     $a = 1;
     $b = 1;
-    $i = 0;
-    while ($i<100000000000000){
-        $i++;
-    
-    if ($a > $x) {echo "Задуманное число НЕ входит в числовой ряд";
+    if (isset($_GET['OK']))
+    {
+    $x = $_GET['number'];
+    echo "Вы ввели число - $x<br>";
+    while ($x){
+    if ($a > $x) 
+    {
+        echo "Задуманное число НЕ входит в числовой ряд";
         break;
     }
-    else if ($a == $x){ echo "Задуманное число входит в числовой ряд";
-    break;
+    else if ($a == $x)
+    { 
+        echo "Задуманное число входит в числовой ряд";
+        break;
     }
-    else {
+    else 
+    {
         $c = $a;
         $a+=$b;
-        $b=$c;
-        /*echo "a = $a<br>";
+        $b = $c;
+        /*echo "c = $c<br>";
+        echo "a = $a<br>";
         echo "b = $b<br>";
-
-        echo "c = $c<br>";
         echo "========<br>";*/
     }
 }
